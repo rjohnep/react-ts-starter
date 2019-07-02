@@ -4,27 +4,24 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-module.exports = options => ({
+module.exports = (options) => ({
   mode: options.mode,
   entry: options.entry,
-  output: Object.assign(
-    {
-      // Compile into js/build.js
-      path: path.resolve(process.cwd(), 'build'),
-      publicPath: '/'
-    },
-    options.output
-  ), // Merge with env dependent settings
+  output: {
+    path: path.resolve(process.cwd(), 'build'),
+    publicPath: '/',
+    ...options.output
+  },
   optimization: options.optimization,
   module: {
     rules: [
       {
-        test: /\.tsx?$/, // Transform all .ts and .tsx files required somewhere with Babel
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: options.babelQuery
+          loader: 'ts-loader'
         }
       },
       {
@@ -40,6 +37,10 @@ module.exports = options => ({
         test: /\.css$/,
         include: /node_modules/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(eot|otf|ttf|woff|woff2)$/,
+        use: 'file-loader'
       }
     ]
   },
@@ -54,9 +55,15 @@ module.exports = options => ({
   resolve: {
     modules: ['node_modules', 'app'],
     extensions: ['.js', '.jsx', '.react.js', '.ts', '.tsx'],
-    mainFields: ['browser', 'jsnext:main', 'main']
+    mainFields: ['browser', 'jsnext:main', 'main'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(process.cwd(), 'tsconfig.json')
+      })
+    ]
   },
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
-  performance: options.performance || {}
+  performance: options.performance || {},
+  ...(options.devServer && { devServer: options.devServer })
 });

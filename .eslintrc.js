@@ -6,9 +6,14 @@ const prettierOptions = JSON.parse(
 );
 
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   extends: ['airbnb-typescript', 'prettier', 'prettier/react'],
-  plugins: ['prettier', '@typescript-eslint', 'react', 'react-hooks'],
+  plugins: [
+    '@typescript-eslint/eslint-plugin',
+    'prettier',
+    'react',
+    'react-hooks'
+  ],
   env: {
     jest: true,
     browser: true,
@@ -19,7 +24,7 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
+      jsx: false
     }
   },
   rules: {
@@ -55,18 +60,11 @@ module.exports = {
     'react/jsx-first-prop-new-line': [2, 'multiline'],
     'react/jsx-filename-extension': 0,
     'react/jsx-no-target-blank': 0,
+    'react/jsx-props-no-spreading': 0,
     'react/jsx-uses-vars': 2,
     'react/require-default-props': 0,
     'react/require-extension': 0,
     'react/self-closing-comp': 0,
     'react/sort-comp': 0
-  },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
-    },
-    'import/resolver': {
-      typescript: {}
-    }
   }
 };

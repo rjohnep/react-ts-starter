@@ -1,5 +1,6 @@
-yarn
+TS React starter
 
-yarn start
+TODO:
 
-Based on react-boilerplate
+- initialising via blob generators;
+- make generator templates;

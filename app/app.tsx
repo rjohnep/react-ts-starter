@@ -10,11 +10,11 @@ const render = () => {
 };
 
 if (module.hot) {
-  // Hot reloadable React components and translation json files
+  // Hot reloadable React components
   // modules.hot.accept does not accept dynamic dependencies,
   // have to be constants at compile-time
   module.hot.accept(['./containers/App'], () => {
-    ReactDOM.unmountComponentAtNode(MOUNT_NODE);
+    if (MOUNT_NODE) ReactDOM.unmountComponentAtNode(MOUNT_NODE);
     render();
   });
 }

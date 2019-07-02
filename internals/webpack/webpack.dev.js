@@ -7,13 +7,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
-module.exports = require('./webpack.base.babel')({
+module.exports = require('./webpack.base')({
   mode: 'development',
 
   // Add hot reloading in development
   entry: [
     require.resolve('react-app-polyfill/ie11'),
-    'webpack-hot-middleware/client?reload=true',
     path.join(process.cwd(), 'app/app.tsx') // Start with js/app.tsx
   ],
 
@@ -48,5 +47,13 @@ module.exports = require('./webpack.base.babel')({
 
   performance: {
     hints: false
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname, 'build'),
+    compress: true,
+    port: 9000,
+    hot: true,
+    historyApiFallback: true
   }
 });
