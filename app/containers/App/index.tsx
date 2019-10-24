@@ -1,3 +1,5 @@
-import React from 'react';
+import React, { ReactElement, Fragment } from 'react';
 
-export default () => <>App Home Container</>;
+export const App = (): ReactElement => (
+  <Fragment>DEMO: App Home Container</Fragment>
+);

@@ -1,3 +1,4 @@
+/* eslint-disable*/
 /**
  * DEVELOPMENT WEBPACK CONFIGURATION
  */
