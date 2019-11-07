@@ -1,5 +1,5 @@
-import React, { ReactElement, Fragment } from 'react';
+import React, { Fragment, FC } from 'react';
 
-export const App = (): ReactElement => (
+export const App: FC = () => (
   <Fragment>DEMO: App Home Container</Fragment>
 );

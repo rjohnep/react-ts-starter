@@ -5,7 +5,7 @@ import { App } from './containers/App';
 
 const MOUNT_NODE = document.getElementById('app');
 
-const render = () => {
+const render = (): void => {
   ReactDOM.render(<App />, MOUNT_NODE);
 };
 
