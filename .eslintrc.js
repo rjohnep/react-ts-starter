@@ -55,6 +55,7 @@ module.exports = {
     // 'import/no-named-as-default': 0,
     'import/no-unresolved': 0,
     'import/prefer-default-export': 0,
+    'import/extensions': ['error', 'never', { 'svg': 'always' }],
     // 'react/jsx-closing-bracket-location': [1, 'line-aligned'],
     'react/jsx-uses-vars': 2,
     'react/jsx-first-prop-new-line': [2, 'multiline'],
