@@ -36,10 +36,10 @@
     }
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "internals"
   ],
   "include": [
-    "app/**/*",
-    "internals"
+    "app/**/*"
   ]
 }
