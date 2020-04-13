@@ -30,6 +30,6 @@ module.exports = {
     '**/__tests__/**/*.[t]s?(x)',
     '**/?(*.)+(spec|test).[t]s?(x)'
   ],
-  transform: { '\\.ts?(x)': ['ts-jest'] },
+  preset: 'ts-jest',
   verbose: false
 };

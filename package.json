@@ -21,7 +21,7 @@
     "lint:eslint:fix": "npm run lint:eslint --fix",
     "lint:staged": "lint-staged",
     "test": "jest --coverage",
-    "test:watch": "npm run test --watch"
+    "test:watch": "jest --coverage --watch"
   },
   "browserslist": [
     "last 2 versions",
