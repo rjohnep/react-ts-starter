@@ -44,7 +44,7 @@ module.exports = {
     ],
     'comma-dangle': ['error', 'never'],
     'object-curly-newline': ['error', {
-      'ObjectExpression': 'always',
+      'ObjectExpression': { 'consistent': true },
       'ObjectPattern': { 'multiline': true },
       // 'ImportDeclaration': 'never',
       'ExportDeclaration': { 'multiline': true, 'minProperties': 3 }
@@ -54,6 +54,7 @@ module.exports = {
     'arrow-parens': ['error', 'always'],
     'jsx-a11y/label-has-associated-control': 0,
     // 'import/no-named-as-default': 0,
+    'import/no-extraneous-dependencies': ['error', { 'devDependencies': true }],
     'import/no-unresolved': 0,
     'import/prefer-default-export': 0,
     'import/extensions': ['error', 'never', { 'svg': 'always' }],
