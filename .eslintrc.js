@@ -8,9 +8,10 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
+    'plugin:jest/recommended'
   ],
-  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jest'],
   env: {
     jest: true,
     browser: true,
@@ -53,6 +54,7 @@ module.exports = {
     'no-unused-vars': 2,
     'arrow-body-style': [2, 'as-needed'],
     'arrow-parens': ['error', 'always'],
+    'jest/no-large-snapshots': ['warn', { 'maxSize': 16, 'inlineMaxSize': 8 }],
     'jsx-a11y/label-has-associated-control': 0,
     // 'import/no-named-as-default': 0,
     'import/no-extraneous-dependencies': ['error', { 'devDependencies': true }],
