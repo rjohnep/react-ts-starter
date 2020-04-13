@@ -1,5 +1,4 @@
-/* eslint-disable*/
-// Important modules this config uses
+/* eslint-disable */ 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
@@ -30,7 +29,8 @@ module.exports = require('./webpack.base')({
           compress: {
             comparisons: false
           },
-          parse: {},
+          parse: {
+          },
           mangle: true,
           output: {
             comments: false,
@@ -98,7 +98,6 @@ module.exports = require('./webpack.base')({
   ],
 
   performance: {
-    assetFilter: (assetFilename) =>
-      !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename)
+    assetFilter: (assetFilename) => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename)
   }
 });

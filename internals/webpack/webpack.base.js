@@ -1,4 +1,4 @@
-/* eslint-disable*/
+/* eslint-disable */ 
 const path = require('path');
 const webpack = require('webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
