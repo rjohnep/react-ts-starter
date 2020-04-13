@@ -66,6 +66,12 @@ module.exports = {
     'react/jsx-first-prop-new-line': [2, 'multiline'],
     'react/sort-comp': 0,
     'react/destructuring-assignment': 0,
-    'react/jsx-fragments': [2, 'element']
+    'react/jsx-fragments': [2, 'element'],
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: true
+      }
+    ]
   }
 };
