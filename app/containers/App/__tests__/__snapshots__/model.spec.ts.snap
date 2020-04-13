@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App model should merge users correctly, with deep merging of roles 1`] = `
+Object {
+  "firstName": "Jan",
+  "lastName": "Kowalski",
+  "roles": Array [
+    "admin",
+    "user",
+  ],
+}
+`;
