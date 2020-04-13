@@ -26,6 +26,9 @@ module.exports = {
     }
   },
   moduleDirectories: ['node_modules', 'app'],
+  moduleNameMapper: {
+    '^@app/(.*)$': '<rootDir>/app/$1'
+  },
   testMatch: [
     '**/__tests__/**/*.[t]s?(x)',
     '**/?(*.)+(spec|test).[t]s?(x)'

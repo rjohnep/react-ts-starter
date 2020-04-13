@@ -13,7 +13,7 @@ module.exports = {
     '@babel/preset-typescript'
   ],
   plugins: [
-    'styled-components',
+    'babel-plugin-styled-components',
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-syntax-dynamic-import'
   ],
