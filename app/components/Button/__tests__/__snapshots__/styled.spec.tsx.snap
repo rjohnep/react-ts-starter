@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render primary variant 1`] = `
+.c0 {
+  color: #fff;
+  background: #000;
+  border-radius: 4px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<Button /> should render secondary variant 1`] = `
+.c0 {
+  color: #000;
+  background: #fff;
+  border-radius: 4px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`<Button /> should render success variant 1`] = `
+.c0 {
+  color: #3cb371;
+  background: #000;
+  border-radius: 4px;
+}
+
+<div
+  className="c0"
+/>
+`;

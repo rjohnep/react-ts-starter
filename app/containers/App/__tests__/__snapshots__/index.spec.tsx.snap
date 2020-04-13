@@ -3,5 +3,8 @@
 exports[`<App /> should render and match the snapshot 1`] = `
 <React.Fragment>
   DEMO: App Home Container
+  <Unknown>
+    Hola, Button!
+  </Unknown>
 </React.Fragment>
 `;

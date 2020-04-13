@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
 
 import { App } from './containers/App';
+import { theme } from './theme';
 
 const MOUNT_NODE = document.getElementById('app');
 
 const render = (): void => {
-  ReactDOM.render(<App />, MOUNT_NODE);
+  ReactDOM.render(
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>,
+    MOUNT_NODE
+  );
 };
 
 if (module.hot) {
